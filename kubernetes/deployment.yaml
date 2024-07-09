@@ -18,13 +18,9 @@ spec:
         app: "kubernetes-deployment"
     spec:
       containers:
-      - name: "kubernetes-c1-sha256-1"
-        image: "us-central1-docker.pkg.dev/csci5409kubernetes-417601/csci5409kubernetes/csci5409-k8s-c1"
-        volumeMounts:
-          - mountPath: /home/nikulpokukadiya1998
-            name: kubernetes-volume1
-      - name: "csci5409-k8s-c2-sha256-2"
-        image: "us-central1-docker.pkg.dev/csci5409kubernetes-417601/csci5409kubernetes/csci5409-k8s-c2"
+      - name: "container1"
+        image: "us-central1-docker.pkg.dev/tribal-cortex-428712-n1/kubernetes/container1-image:latest"
+        imagePullPolicy: Always  # Specify the image pull policy here
         volumeMounts:
           - mountPath: /home/nikulpokukadiya1998
             name: kubernetes-volume1
