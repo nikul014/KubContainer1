@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: kubernetes-volume1
+spec:
+  capacity:
+    storage: 1Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /home/nikulpokukadiya1998
+  persistentVolumeReclaimPolicy: Retain
+  claimRef:
+    name: kubernetes-volume-claim1
+    namespace: "default"
