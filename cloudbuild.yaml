@@ -45,3 +45,10 @@ steps:
 
 images:
   - 'us-central1-docker.pkg.dev/tribal-cortex-428712-n1/kubernetes/container1-image:latest'
+
+
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+  logsBucket: gs:kubernetes-container-logs-123123
+
