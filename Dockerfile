@@ -6,7 +6,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-COPY container1 .
+COPY . .
 
 EXPOSE 6000
 
