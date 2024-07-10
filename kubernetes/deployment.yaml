@@ -1,5 +1,3 @@
-# Cloud Build Trigger: $BUILD_ID
----
 apiVersion: "apps/v1"
 kind: "Deployment"
 metadata:

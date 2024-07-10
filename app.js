@@ -10,7 +10,6 @@ const PERSISTENT_DIR = "/home/nikulpokukadiya1998";
 
 app.use(bodyParser.json());
 const CONTAINER_2_URL = "http://kubernetes-service1/calculate";
-// const CONTAINER_2_URL = "http://kubernetes-service1.default.svc.cluster.local/calculate";
 
 // Store file API
 app.post('/store-file', (req, res) => {
@@ -56,10 +55,7 @@ app.post('/calculate', async (req, res) => {
         res.status(response.status).json(response.data);
     } catch (error) {
         console.log(error);
-        res.status(500).json({
-            "file": file,
-            error: "Error connecting to Container 2" + error
-        });
+        res.status(400).json({ file, error: "Input file not in CSV format." });
     }
 });
 
