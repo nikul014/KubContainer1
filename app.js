@@ -9,8 +9,7 @@ const PORT = process.env.PORT || 6000;
 const PERSISTENT_DIR = "/home/nikulpokukadiya1998";
 
 app.use(bodyParser.json());
-// const CONTAINER_2_URL = "http://container2:6001/calculate";
-const CONTAINER_2_URL = "http://kubernetes-service1.default.svc.cluster.local:6001/calculate";
+const CONTAINER_2_URL = "http://kubernetes-service1:6001/calculate";
 
 // Store file API
 app.post('/store-file', (req, res) => {
