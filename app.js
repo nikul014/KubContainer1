@@ -6,7 +6,7 @@ const axios = require('axios');
 
 const app = express();
 const PORT = process.env.PORT || 6000;
-const PERSISTENT_DIR = "/path/to/your/persistent/volume";
+const PERSISTENT_DIR = "/home/nikulpokukadiya1998";
 
 app.use(bodyParser.json());
 
