@@ -22,7 +22,6 @@ spec:
         volumeMounts:
           - mountPath: /home/nikulpokukadiya1998
             name: kubernetes-volume1
-      priorityClassName: high-priority
       volumes:
         - name: kubernetes-volume1
           persistentVolumeClaim:
