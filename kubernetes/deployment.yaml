@@ -26,25 +26,3 @@ spec:
         - name: kubernetes-volume1
           persistentVolumeClaim:
             claimName: kubernetes-volume-claim1
----
-apiVersion: "autoscaling/v2"
-kind: "HorizontalPodAutoscaler"
-metadata:
-  name: "kubernetes-deployment-hpa-y3nx"
-  namespace: "default"
-  labels:
-    app: "kubernetes-deployment"
-spec:
-  scaleTargetRef:
-    kind: "Deployment"
-    name: "kubernetes-deployment"
-    apiVersion: "apps/v1"
-  minReplicas: 1
-  maxReplicas: 5
-  metrics:
-    - type: "Resource"
-      resource:
-        name: "cpu"
-        target:
-          type: "Utilization"
-          averageUtilization: 80
