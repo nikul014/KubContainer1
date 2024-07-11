@@ -5,13 +5,13 @@ const path = require('path');
 const axios = require('axios');
 
 const app = express();
+app.use(bodyParser.json());
+
 const PORT = process.env.PORT || 6000;
 const PERSISTENT_DIR = "/home/nikulpokukadiya1998";
-
-app.use(bodyParser.json());
 const CONTAINER_2_URL = "http://kubernetes-service1/calculate";
 
-// Store file API
+// Store file API for container 1
 app.post('/store-file', (req, res) => {
     const { file, data } = req.body;
 
@@ -30,7 +30,7 @@ app.post('/store-file', (req, res) => {
     });
 });
 
-// Calculate API
+// Calculate API for container 1
 app.post('/calculate', async (req, res) => {
 
     const {file, product} = req.body;
