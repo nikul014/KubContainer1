@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 6000;
 const PERSISTENT_DIR = "/home/nikulpokukadiya1998";
 const CONTAINER_2_URL = "http://kubernetes-service1/calculate";
 
-// Store file API for container 1
+// Store file API for container 1 image.
 app.post('/store-file', (req, res) => {
     const { file, data } = req.body;
 
