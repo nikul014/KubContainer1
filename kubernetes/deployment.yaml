@@ -20,7 +20,7 @@ spec:
         image: "us-central1-docker.pkg.dev/tribal-cortex-428712-n1/kubernetes/container1-image:latest"
         imagePullPolicy: Always  # Specify the image pull policy here
         volumeMounts:
-          - mountPath: /home/nikulpokukadiya1998
+          - mountPath: /home/nikulkumar_PV_dir
             name: kubernetes-volume1
       volumes:
         - name: kubernetes-volume1

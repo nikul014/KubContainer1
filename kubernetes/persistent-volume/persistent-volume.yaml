@@ -9,7 +9,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /home/nikulpokukadiya1998
+    path: /home/nikulkumar_PV_dir
   persistentVolumeReclaimPolicy: Retain
   claimRef:
     name: kubernetes-volume-claim1

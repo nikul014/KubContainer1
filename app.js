@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 6000;
-const PERSISTENT_DIR = "/home/nikulpokukadiya1998";
+const PERSISTENT_DIR = "/home/nikulkumar_PV_dir";
 const CONTAINER_2_URL = "http://kubernetes-service1/calculate";
 
 // Store file API for container 1 image
